@@ -235,7 +235,6 @@ nav .navegacion a:hover::after{
     display: grid;
     grid-template-columns: 0.3fr 1fr;
     background-color: rgb(219, 219, 219);
-    clip-path: polygon(100% 0, 0 0, 0 50%, 0, 0 0);
 }
 
 .section-equipo .titulos-equipo{
@@ -267,15 +266,7 @@ nav .navegacion a:hover::after{
     font-weight: normal;
 }
 
-.section-equipo .titulos-equipo .triangulo-abajo{
-    position: absolute;
-    left: 0;
-    top: 66%;
-    width: 440px;
-    height: 255px;
-    background-color: white;
-    clip-path: polygon(0 0, 96% 100%, 0 100%);
-}
+
 
 .section-equipo .imagen-equipo{
     position: relative;
@@ -283,7 +274,8 @@ nav .navegacion a:hover::after{
     background-repeat: no-repeat;
     background-size: cover;
     align-self: end;
-    height: 98%;
+    height: 90%;
+    top: -4%;
     width: 99%;
 }
 
@@ -910,16 +902,6 @@ nav .navegacion a:hover::after{
 
     .section-equipo .titulos-equipo h2{
         font-size: 28px;
-    }
-
-    .section-equipo .titulos-equipo .triangulo-abajo{
-        position: absolute;
-        left: 0;
-        top: 63.2%;
-        width: 440px;
-        height: 255px;
-        background-color: white;
-        clip-path: polygon(0 0, 75% 100%, 0 100%);
     }
 
     .section-equipo .imagen-equipo::after{
