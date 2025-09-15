@@ -255,14 +255,14 @@
         src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
     </script>
     <script type="text/javascript">
+
+        console.log(innerWidth)
+        
       (function(){
           emailjs.init("hdNgzsdJ6JiyUuFsG");
       })();
 
       function enviarCorreo() {
-
-          console.log(innerWidth)
-
 
         const nombre = document.getElementById("nombre").value
         const apellido = document.getElementById("apellido").value
@@ -283,4 +283,5 @@
 
 </body>
 </html>
+
 
