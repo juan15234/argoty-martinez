@@ -1,0 +1,1015 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap');
+
+html, body{
+    margin: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+nav{
+    display: grid;
+    position: absolute;
+    grid-template-columns: 0.35fr 1fr;
+    height: auto;
+    top: 1%;
+    width: 99.5%;
+    z-index: 5;
+}
+
+nav .empresa-logo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+nav .empresa-logo *{
+    margin: 0;
+}
+
+nav .empresa-logo h2{
+    font-size: 30px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: lighter;
+}
+
+nav .empresa-logo h1{
+    font-size: 40px;
+    font-family: 'Cinzel';
+    font-weight: normal;
+}
+
+
+nav .navegacion{
+    display: flex;
+    gap: 50px;
+    list-style: none;
+    font-size: 20px;
+    align-items: center;
+    margin: 0;
+    margin-right: 10px;
+    justify-content: end;
+    font-family: 'Cinzel', sans-serif;
+    z-index: 2;
+}
+
+nav .navegacion a{
+    position: relative;
+    text-decoration: none;
+    color: black;
+}
+
+nav .navegacion a::after{
+    content: ""; /* Crea el pseudo-elemento */
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -5px; /* Ubica la lÃ­nea debajo */
+    width: 0; /* Inicialmente oculta */
+    height: 1px;
+    background-color: rgb(0,0,0);
+    border-radius: 50px;
+    transition: width 0.3s ease-in-out;
+}
+
+nav .navegacion a:hover::after{
+    width: 100%;
+}
+
+.section-principal{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    background-image: url(imagenes/imagenes-extra/imagen-principal.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh; 
+    width: 100%;
+}
+
+.section-principal::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(255, 255, 255, 0.6);
+}
+
+.section-principal .titulos-container{
+    position: relative;
+    width: 50%;
+    height: 400px;
+    z-index: 5;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+    align-self: center;
+}
+
+.section-principal .titulos-container .titulos-principal h2{
+    font-size: 70px;
+    font-family: 'Cinzel', sans-serif;
+    font-weight: lighter;
+    padding: 0;
+    margin: 0;
+}
+
+.section-principal .titulos-container .titulos-principal h4{
+    font-size: 24px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    padding: 0;
+    margin: 0;
+}
+
+.section-principal .titulos-container .titulos-principal{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.section-principal .titulos-container .boton-reunion{
+    width: 300px;
+    height: 50px;
+    justify-self: center;
+    align-self: self-end;
+    border-radius: 20px;
+    outline: none;
+    border: 2px solid black;
+    background-color: transparent;
+    font-size: 18px;
+    transition: background-color 0.2s ease-in;
+}
+
+.section-principal .titulos-container .boton-reunion:hover{
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+/*-----------------SECTION QUIENES SOMOS--------------*/
+.section-quienes-somos{
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100vh; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+
+.section-quienes-somos h2{
+    position: relative;
+    justify-self: self-end;
+    font-size: 60px;
+    font-family: 'Cinzel', sans-serif;
+    font-weight: lighter;
+    margin: 0;
+}
+
+.section-quienes-somos .imagen-logo-empresa{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin-top: 20px;
+}
+
+.section-quienes-somos .quienes-somos{
+    position: relative;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+}
+
+.section-quienes-somos .informacion-quienes-somos {
+    font-size: 20px;
+    margin: 20px;
+    padding: 50px;
+    justify-self: center;
+    font-family: 'Montserrat', sans-serif;
+    text-align: justify;
+    line-height: 1.6;
+}
+.section-quienes-somos img{
+    justify-self: center;
+}
+
+/*-----------------SECTION EQUIPO--------------*/
+
+.section-equipo{
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100vh; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.section-equipo .imagen-logo-empresa{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin-top: 20px;
+}
+
+.section-equipo .barra-superior{
+    width: 100%;
+    height: 3vh;
+    background-color: gray;
+}
+
+.section-equipo .equipo{
+    position: relative;
+    width: 100%;
+    min-height: 81vh; 
+    display: grid;
+    grid-template-columns: 0.3fr 1fr;
+    background-color: rgb(219, 219, 219);
+    clip-path: polygon(100% 0, 0 0, 0 50%, 0, 0 0);
+}
+
+.section-equipo .titulos-equipo{
+    justify-self: center;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section-equipo .titulos-equipo *{
+    margin: 0;
+}
+
+.section-equipo .titulos-equipo #equipo-h2{
+    font-size: 50px;
+    margin: 10px;
+}
+
+.section-equipo .titulos-equipo h3{
+    font-size: 25px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: lighter;
+}
+
+.section-equipo .titulos-equipo h2{
+    font-size: 35px;
+    font-family: 'Cinzel';
+    font-weight: normal;
+}
+
+.section-equipo .titulos-equipo .triangulo-abajo{
+    position: absolute;
+    left: 0;
+    top: 66%;
+    width: 440px;
+    height: 255px;
+    background-color: white;
+    clip-path: polygon(0 0, 96% 100%, 0 100%);
+}
+
+.section-equipo .imagen-equipo{
+    position: relative;
+    background-image: url(imagenes/imagenes-extra/imagen-equipo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-self: end;
+    height: 98%;
+    width: 99%;
+}
+
+.section-equipo .imagen-equipo::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255,255,255, 0.527);
+}
+
+/*------------SECTION CLIENTES------------------*/
+.section-clientes{
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100vh; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.section-clientes .imagen-logo-empresa{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin-top: 20px;
+}
+
+.section-clientes .barra-superior{
+    width: 100%;
+    height: 3vh;
+    background-color: rgb(128, 128, 128);
+}
+
+.section-clientes .clientes{
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(128, 128, 128, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section-clientes .clientes h2{
+    font-size: 40px;
+    background-color: rgb(177, 169, 159);
+    padding: 10px;
+    font-family: 'Cinzel';
+    font-weight: normal;
+}
+
+.section-clientes .clientes .imagenes{
+    position: relative;
+    width: 50%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: self-start;
+    flex-wrap: wrap;
+    gap: 80px;
+}
+
+.section-clientes .clientes .imagenes img{
+    width: 25%;
+    height: 15%;
+    object-fit: cover;
+    mix-blend-mode: multiply;
+
+}
+
+.section-clientes .clientes .imagenes .imagen-modificada{
+    object-fit: contain;
+}
+
+/*---------SECTION PROYECTOS COMERCIALES-------------*/
+.section-proyectos-comerciales{
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100vh; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.section-proyectos-comerciales .titulos{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 0.9fr 1fr;
+}
+
+.section-proyectos-comerciales .titulos h2{
+    width: 90%;
+    text-align: center;
+    font-size: 40px;
+    background-color: rgb(224, 221, 217);
+    padding: 10px;
+    font-family: 'Cinzel';
+    font-weight: normal;
+    margin-left: 20px;
+    align-self: end;
+}
+
+.section-proyectos-comerciales .titulos .imagen-logo-empresa{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin-top: 20px;
+}
+
+.proyectos-comerciales{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.section-proyectos-comerciales .proyectos-comerciales .imagenes{
+    position: relative;
+    width: 90%;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.section-proyectos-comerciales .proyectos-comerciales .imagenes img{
+    position: relative;
+    width: 400px;
+    height: 350px;
+    object-fit: cover;
+    mix-blend-mode: multiply;
+    overflow: hidden;
+    transition: transform 0.4s ease;
+}
+
+.section-proyectos-comerciales .proyectos-comerciales .imagenes img:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.section-proyectos-comerciales .barra-inferior{
+    width: 100%;
+    height: 8vh;
+    background-color: rgb(177, 169, 159);
+    margin: 0;
+}
+
+/*---------SECTION PROYECTOS RESIDENCIALES-------------*/
+.section-proyectos-residenciales{
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100vh; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.section-proyectos-residenciales .titulos{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 0.9fr 1fr;
+}
+
+.section-proyectos-residenciales .titulos h2{
+    width: 90%;
+    text-align: center;
+    font-size: 40px;
+    background-color: rgb(224, 221, 217);
+    padding: 10px;
+    font-family: 'Cinzel';
+    font-weight: normal;
+    margin-left: 20px;
+    align-self: end;
+}
+
+.section-proyectos-residenciales .titulos .imagen-logo-empresa{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin-top: 20px;
+}
+
+.proyectos-residenciales{
+    position: relative;
+    width: 100%;
+    height: 65%;
+    display: flex;
+    justify-content: center;
+}
+
+.section-proyectos-residenciales .proyectos-residenciales .imagenes{
+    position: relative;
+    width: 90%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.section-proyectos-residenciales .proyectos-residenciales .imagenes img{
+    position: relative;
+    width: 400px;
+    height: 350px;
+    object-fit: cover;
+    mix-blend-mode: multiply;
+    overflow: hidden;
+    transition: transform 0.4s ease;
+}
+
+.section-proyectos-residenciales .proyectos-residenciales .imagenes img:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+    
+}
+
+.section-proyectos-residenciales .barra-inferior{
+    width: 100%;
+    height: 9vh;
+    background-color: rgb(177, 169, 159);
+    margin: 0;
+}
+
+/*---------SECTION NUESTROS SERVICIOS-------------*/
+.section-nuestros-servicios{
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100vh; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.section-nuestros-servicios .imagen-logo-empresa{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin-top: 20px;
+}
+
+.section-nuestros-servicios .barra-superior{
+    position: relative;
+    width: 100%;
+    height: 3vh;
+    background-color: rgb(128, 128, 128);
+}
+
+.section-nuestros-servicios .nuestros-servicios{
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    background-color: rgb(128, 128, 128, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section-nuestros-servicios .nuestros-servicios h2{
+    position: relative;
+    font-size: 40px;
+    background-color: rgb(177, 169, 159);
+    padding: 10px;
+    font-family: 'Cinzel';
+    font-weight: normal;
+}
+
+.nuestros-servicios-info {
+    position: relative;
+    width: 95%;
+    height: 75%;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.nuestros-servicios-info .servicio{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 400px;
+}
+
+.nuestros-servicios-info .servicio-info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    width: 400px;
+    background-color: rgb(177, 169, 159);
+}
+
+.nuestros-servicios-info .servicio-info h2{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    text-align: center;
+}
+
+.nuestros-servicios-info .servicio-info h2 strong{
+    font-size: 35px;
+    font-weight: bold;
+    color: white;
+}
+
+.nuestros-servicios-info .servicio p{
+    text-align: justify;
+    line-height: 2.2;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+}
+
+.section-nuestros-servicios span{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+}
+
+/*---------SECTION NUESTROS SERVICIOS COMPLEMENTARIOS-------------*/
+.section-nuestros-servicios{
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100vh; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.section-nuestros-servicios .imagen-logo-empresa{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin-top: 20px;
+}
+
+.section-nuestros-servicios .barra-superior{
+    position: relative;
+    width: 100%;
+    height: 3vh;
+    background-color: rgb(128, 128, 128);
+}
+
+.section-nuestros-servicios .nuestros-servicios-complementarios{
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    background-color: rgb(128, 128, 128, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section-nuestros-servicios .nuestros-servicios-complementarios h2{
+    position: relative;
+    font-size: 40px;
+    background-color: rgb(177, 169, 159);
+    padding: 10px;
+    font-family: 'Cinzel';
+    font-weight: normal;
+}
+
+.nuestros-servicios-info {
+    position: relative;
+    width: 95%;
+    height: 75%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.nuestros-servicios-info .servicio{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 450px;
+}
+
+.nuestros-servicios-info .servicio-info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    width: 100%;
+    background-color: rgb(177, 169, 159);
+}
+
+.nuestros-servicios-info .servicio-info h2{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    text-align: center;
+}
+
+.nuestros-servicios-info .servicio-info h2 strong{
+    font-size: 35px;
+    font-weight: bold;
+    color: white;
+}
+
+.nuestros-servicios-info .servicio p{
+    width: 100%;
+    text-align: justify;
+    line-height: 1.8;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+}
+
+.section-nuestros-servicios .nuestros-servicios-complementarios span{
+    font-family: "Cinzel";
+    font-weight: normal;
+}
+
+/*---------SECTION CONTACTO-------------*/
+.section-contacto{
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100vh; 
+}
+
+.section-contacto .contacto{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1.2fr 0.6fr;
+}
+
+.section-contacto .contacto .contacto-info{
+    position: relative;
+    background: linear-gradient(90deg, rgb(43, 43, 43), rgb(87, 87, 87));
+    width: 100%;
+    height: 100vh;
+}
+
+.section-contacto .contacto .contacto-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-contacto .contacto .contacto-info h2{
+    font-size: 90px;
+    font-family: 'Cinzel';
+    font-weight: normal;
+    color: white;
+    margin: 10px;
+}
+
+.section-contacto .contacto img{
+    width: 100%;
+    height: 100vh;
+}
+
+.section-contacto .contacto .contacto-info ul li{
+    list-style: none;
+    color: white;
+    font-size: 25px;
+    margin: 25px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.section-contacto .contacto .contacto-info .boton-solicitar-servicios{
+    position: relative;
+    width: 300px;
+    height: 50px;
+    border-radius: 50px;
+    outline: none;
+    border: 1px solid black;
+    font-size: 22px;
+    background-color: white;
+    transition: background-color, color 0.3s ease-in;
+    font-weight: normal;
+    margin-left: 20px;
+    z-index: 0;
+}
+
+.section-contacto .contacto .contacto-info .boton-solicitar-servicios:hover{
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+/*-------------------SECCION ENVIAR EMAIL---------------------*/
+.section-enviar-correo{
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100vh; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.section-enviar-correo .imagen-logo-empresa{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin-top: 10px;
+}
+
+.section-enviar-correo h2{
+    font-size: 90px;
+    font-family: 'Cinzel';
+    font-weight: normal;
+    margin: 0;
+}
+
+.section-enviar-correo .enviar-correo{
+    position: relative;
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 35px;
+}
+
+.section-enviar-correo .enviar-correo .nombre-completo{
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+
+.section-enviar-correo .enviar-correo .campo{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+}
+
+.section-enviar-correo .enviar-correo .campo input{
+    height: 30px;
+    font-size: 20px;
+    padding: 5px;
+    font-family: 'Montserrat', sans-serif;
+    border: 2px solid gray;
+}
+
+.section-enviar-correo .enviar-correo .campo textarea{
+    font-size: 20px;
+    padding: 5px;
+    border: 2px solid gray;
+    font-family: 'Montserrat', sans-serif;
+    resize: none;
+}
+
+.section-enviar-correo .enviar-correo .campo label{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.section-enviar-correo .enviar-correo .campo label strong{
+    font-family: Arial, Helvetica, sans-serif;
+    color: red;
+}
+
+.section-enviar-correo .enviar-correo button{
+    position: relative;
+    width: 300px;
+    height: 50px;
+    outline: none;
+    border: 1px solid black;
+    font-size: 22px;
+    background-color: white;
+    transition: transform,box-shadow 0.5s ease;
+}
+
+.section-enviar-correo .enviar-correo button:hover{
+    transform: translate(5%, -5%);
+    box-shadow: -15px 15px 15px rgb(0,0,0,0.5);
+    cursor: pointer;
+}
+
+/*COMPUTADORAS PEQUEÑAS*/
+
+@media (min-width:1201px) and (max-width: 1700px) {
+
+    nav .empresa-logo h2{
+        font-size: 25px;
+    }
+
+    nav .empresa-logo h1{
+        font-size: 30px;
+    }
+    
+    .section-principal .titulos-container{
+        height: 300px;
+    }
+
+    .section-principal .titulos-container .titulos-principal h2{
+        font-size: 50px;
+    }
+
+    .section-principal .titulos-container .titulos-principal h4{
+        font-size: 17px;
+    }
+
+    /*-----------------SECTION QUIENES SOMOS--------------*/
+
+
+
+    /*-----------------SECTION EQUIPO--------------*/
+    .section-equipo .titulos-equipo h3{
+        font-size: 22px;
+    }
+
+    .section-equipo .titulos-equipo h2{
+        font-size: 28px;
+    }
+
+    .section-equipo .titulos-equipo .triangulo-abajo{
+        position: absolute;
+        left: 0;
+        top: 63.2%;
+        width: 440px;
+        height: 255px;
+        background-color: white;
+        clip-path: polygon(0 0, 75% 100%, 0 100%);
+    }
+
+    .section-equipo .imagen-equipo::after{
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255,255,255, 0.527);
+    }
+
+    /*------------SECTION CLIENTES------------------*/
+
+    .section-clientes .imagen-logo-empresa{
+        position: relative;
+        width: 100px;
+        height: 100px;
+        margin-top: 20px;
+    }
+
+    .section-clientes .barra-superior{
+        width: 100%;
+        height: 3vh;
+        background-color: rgb(128, 128, 128);
+    }
+
+    .section-clientes .clientes{
+        height: 80vh;
+    }
+
+    .section-clientes .clientes .imagenes{
+        height: 80%;
+    }
+
+    /*---------SECTION PROYECTOS COMERCIALES-------------*/
+
+    .section-proyectos-comerciales .proyectos-comerciales .imagenes img{
+        position: relative;
+        width: 300px;
+        height: 300px;
+        object-fit: cover;
+        mix-blend-mode: multiply;
+        overflow: hidden;
+        transition: transform 0.4s ease;
+    }
+
+    /*---------SECTION PROYECTOS RESIDENCIALES-------------*/
+
+    .section-proyectos-residenciales .proyectos-residenciales .imagenes img{
+        position: relative;
+        width: 300px;
+        height: 300px;
+        object-fit: cover;
+        mix-blend-mode: multiply;
+        overflow: hidden;
+        transition: transform 0.4s ease;
+    }
+
+    /*---------SECTION NUESTROS SERVICIOS-------------*/
+
+    .nuestros-servicios-info .servicio-info{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 300px;
+        width: 100%;
+        background-color: rgb(177, 169, 159);
+    }
+
+    #servicio-de-interiores p{
+        line-height: 1.5;
+    }
+
+    .nuestros-servicios-info .servicio-info h2{
+        font-size: 35px;
+    }
+
+    .nuestros-servicios-info .servicio-info h2 strong{
+        font-size: 35px;
+    }
+
+    .nuestros-servicios-info .servicio p{
+        line-height: 1.5;
+        font-size: 15px;
+    }
+
+    /*-------------------SECCION ENVIAR EMAIL---------------------*/
+
+    .section-enviar-correo .enviar-correo{
+        width: 40%;
+        gap: 20px;
+    }
+
+}
