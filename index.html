@@ -130,19 +130,18 @@
     </section>
 
     <section class="section-nuestros-servicios">
-        <div class="barra-superior"></div>
         <img src="imagenes/imagenes-extra/imagen-logo-empresa.png" alt="imagen-logo-empresa" class="imagen-logo-empresa">
         <div class="nuestros-servicios">
             <h2>NUESTROS SERVICIOS DE DISEÑO</h2>
             <div class="nuestros-servicios-info">
-                <div class="servicio" id="servicio-de-interiores">
+                <div class="servicio" >
                     <div class="servicio-info">
                         <h2>Diseño de interiores <strong>residenciales</strong></h2>
                     </div>
                     <p>TRANSFORMAMOS CASAS Y APARTAMENTOS EN HOGARES CON ESTILO, FUNCIONALIDAD Y PERSONALIDAD. CADA PROYECTO BUSCA EL EQUILIBRIO ENTRE CONFORT, ESTÉTICA Y APROVECHAMIENTO INTELIGENTE DEL ESPACIO.</p>
                 </div>
 
-                <div class="servicio">
+                <div class="servicio" id="servicio-de-consultorios">
                     <div class="servicio-info">
                         <h2>Diseño y remodelación de consultorios <strong>de salud y estética</strong></h2>
                     </div>
@@ -184,7 +183,7 @@
                     <div class="servicio-info">
                         <h2>Remodelación</h2>
                     </div>
-                    <p>.RENOVAMOS CONSULTORIOS, VIVIENDAS Y APARTAMENTOS CON PRECISIÓN Y CREATIVIDAD, ASEGURANDO RESULTADOS ESTÉTICOS, FUNCIONALES Y MODERNOS. EN EL CASO DE CONSULTORIOS, INTEGRAMOS DISEÑO Y NORMATIVA GARANTIZANDO QUE CADA ESPACIO CUMPLA CON LOS ESTÁNDARES TÉCNICOS Y TRANSMITA CONFIANZA.</p>
+                    <p>RENOVAMOS CONSULTORIOS, VIVIENDAS Y APARTAMENTOS CON PRECISIÓN Y CREATIVIDAD, ASEGURANDO RESULTADOS ESTÉTICOS, FUNCIONALES Y MODERNOS. EN EL CASO DE CONSULTORIOS, INTEGRAMOS DISEÑO Y NORMATIVA GARANTIZANDO QUE CADA ESPACIO CUMPLA CON LOS ESTÁNDARES TÉCNICOS Y TRANSMITA CONFIANZA.</p>
                 </div>
             </div>
             <span>¨Somos especialistas en acabados de alto nivel y en la transformación de espacios¨</span>
@@ -233,7 +232,7 @@
 
             <div class="campo">
                 <label for="mensaje">Mensaje<strong>*</strong></label>
-                <textarea name="mensaje" id="mensaje" rows="4" cols="30"></textarea>
+                <textarea name="mensaje" id="mensaje" rows="4" cols="30">Ej: Necesito una casa campestre, me puedes dar mas info?</textarea>
             </div>
 
             <div class="campo">
@@ -255,15 +254,12 @@
         src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
     </script>
     <script type="text/javascript">
-
-        console.log(innerWidth)
-        
       (function(){
           emailjs.init("hdNgzsdJ6JiyUuFsG");
       })();
 
       function enviarCorreo() {
-
+        
         const nombre = document.getElementById("nombre").value
         const apellido = document.getElementById("apellido").value
         const mensaje = document.getElementById("mensaje").value
@@ -279,9 +275,15 @@
               console.log("Error: " + JSON.stringify(error));
           });
       }
+
+        const textArea = document.getElementById("mensaje")
+
+        textArea.addEventListener("click", ()=>{
+            textArea.style.color = "black"
+            textArea.textContent = ""
+        })
+
     </script>
 
 </body>
 </html>
-
-
