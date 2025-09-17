@@ -163,7 +163,7 @@ nav .navegacion a:hover::after{
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 50px;
+    gap: 20px;
 }
 
 .section-quienes-somos h2{
@@ -556,14 +556,12 @@ nav .navegacion a:hover::after{
     height: 75%;
     display: flex;
     justify-content: center;
-    gap: 40px;
 }
 
 .nuestros-servicios-info .servicio{
     display: flex;
     flex-direction: column;
     gap: 20px;
-    width: 400px;
 }
 
 .nuestros-servicios-info .servicio-info{
@@ -571,8 +569,8 @@ nav .navegacion a:hover::after{
     justify-content: center;
     align-items: center;
     height: 300px;
-    width: 400px;
-    background-color: rgb(177, 169, 159);
+    width: 700px;
+    background-color: rgb(207, 198, 187);
 }
 
 .nuestros-servicios-info .servicio-info h2{
@@ -859,7 +857,7 @@ nav .navegacion a:hover::after{
 
 /*COMPUTADORAS PEQUEÑAS*/
 
-@media (min-width:1201px) and (max-width: 1700px) {
+@media (min-width:1280px) and (max-width: 1700px) {
 
     nav .empresa-logo h2{
         font-size: 25px;
@@ -867,6 +865,10 @@ nav .navegacion a:hover::after{
 
     nav .empresa-logo h1{
         font-size: 30px;
+    }
+
+    nav{
+        grid-template-columns: 0.6fr 1fr;
     }
     
     .section-principal .titulos-container{
@@ -879,6 +881,21 @@ nav .navegacion a:hover::after{
 
     .section-principal .titulos-container .titulos-principal h4{
         font-size: 17px;
+    }
+
+    /*-------------SECTION QUIENES SOMOS----------*/
+
+    .section-quienes-somos .quienes-somos{
+        margin-bottom: 10px;
+    }
+    
+    .section-quienes-somos .informacion-quienes-somos {
+        padding: 20px;
+        font-size: 1.2rem;
+        line-height: 1.3;
+    }
+    .section-quienes-somos img{
+        justify-self: center;
     }
 
     /*-----------------SECTION EQUIPO--------------*/
@@ -922,6 +939,10 @@ nav .navegacion a:hover::after{
     }
 
     /*---------SECTION PROYECTOS COMERCIALES-------------*/
+
+    .section-proyectos-residenciales .titulos h2{
+        font-size: 38px;
+    }
 
     .section-proyectos-comerciales .proyectos-comerciales .imagenes{
         margin-bottom: 15px;
@@ -1012,4 +1033,228 @@ nav .navegacion a:hover::after{
         gap: 20px;
     }
 
+}
+
+/*-----------TABLETS-------------*/
+@media (min-width: 1000px) and (max-width: 1279px) {
+    nav .empresa-logo h2{
+        font-size: 20px;
+    }
+
+    nav .empresa-logo h1{
+        font-size: 25px;
+    }
+
+    nav{
+        grid-template-columns: 0.6fr 1fr;
+    }
+
+    nav .empresa-logo{
+        justify-self: self-start;
+        margin-left: 20px;
+    }
+
+    nav .navegacion li a{
+        font-size: 18px;
+    }
+
+    .section-principal .titulos-container{
+        height: 300px;
+    }
+
+    .section-principal .titulos-container .titulos-principal h2{
+        font-size: 30px;
+    }
+
+    .section-principal .titulos-container .titulos-principal h4{
+        font-size: 13px;
+    }
+
+    /*-------------SECTION QUIENES SOMOS----------*/
+
+    .section-quienes-somos .quienes-somos{
+        margin-bottom: 10px;
+        align-items: center;
+    }
+    
+    .section-quienes-somos .informacion-quienes-somos {
+        padding: 20px;
+        font-size: 1.2rem;
+        line-height: 1.25;
+    }
+
+    .section-quienes-somos img{
+        justify-self: center;
+        width:100%;
+    }
+
+    /*-----------------SECTION EQUIPO--------------*/
+
+    .section-equipo .equipo {
+        grid-template-columns: 0.4fr 1fr;
+    }
+
+    .section-equipo .titulos-equipo h3{
+        font-size: 20px;
+    }    .section-equipo .titulos-equipo{
+        width: 100%;
+    }
+
+    .section-equipo .titulos-equipo h2{
+        font-size: 21px;
+    }
+
+    .section-equipo .imagen-equipo{
+        justify-self: end;
+        margin-right: 30px;
+        width: 90%;
+    }
+
+    /*------------SECTION CLIENTES------------------*/
+
+    .section-clientes .imagen-logo-empresa{
+        position: relative;
+        width: 100px;
+        height: 100px;
+        margin-top: 10px;
+    }
+
+    .section-clientes .barra-superior{
+        width: 100%;
+        height: 3vh;
+        background-color: rgb(128, 128, 128);
+    }
+
+    .section-clientes .clientes{
+        height: 80vh;
+    }
+
+    .section-clientes .clientes .imagenes{
+        height: 70%;
+        width: 80%;
+    }
+
+    .section-clientes .barra-inferior{
+        height: 5vh;
+        width: 100%;
+        background-color: rgb(177, 169, 159);
+        margin: 0;
+    }
+
+    /*---------SECTION PROYECTOS COMERCIALES-------------*/
+
+    .section-proyectos-comerciales .titulos {
+        grid-template-columns: 0.8fr 1fr;
+    }
+
+    .section-proyectos-comerciales .titulos{
+        margin-bottom: 15px;
+    }
+
+    .section-proyectos-comerciales .titulos h2 {
+        font-size: 30px;
+        margin-left: 10px;
+    }
+
+    .section-proyectos-comerciales .proyectos-comerciales .imagenes{
+        margin-bottom: 15px;
+    }
+
+    .section-proyectos-comerciales .proyectos-comerciales .imagenes img{
+        width: 20%;
+        height: 45%;
+    }
+
+    .section-proyectos-comerciales .barra-inferior{
+        height: 5vh;
+    }
+
+    /*---------SECTION PROYECTOS RESIDENCIALES-------------*/
+
+    .section-proyectos-comerciales .titulos {
+        grid-template-columns: 0.8fr 1fr;
+    }
+
+    .section-proyectos-residenciales .titulos h2 {
+        font-size: 30px;
+    }
+
+    .section-proyectos-residenciales .proyectos-residenciales .imagenes img{
+        width: 20%;
+        height: 80%;
+    }
+
+    .section-proyectos-residenciales .proyectos-residenciales .imagenes{
+        height: auto;
+        margin-bottom: 180px;
+    }
+
+    .section-proyectos-residenciales .barra-inferior{
+        height: 5vh;
+    }
+
+    /*---------SECTION NUESTROS SERVICIOS-------------*/
+
+    .section-proyectos-residenciales .titulos{
+        margin-bottom: 15px;
+    }
+
+    .section-nuestros-servicios .nuestros-servicios  .servicio{
+        height: auto;
+    }
+
+    .section-nuestros-servicios .nuestros-servicios .servicio .servicio-info{
+        height: 250px;
+    }
+
+    .section-nuestros-servicios .nuestros-servicios{
+        height: 100vh;
+    }
+
+    .nuestros-servicios-info .servicio-info h2{
+        font-size: 30px;
+    }
+
+    .nuestros-servicios-info .servicio-info h2 strong{
+        font-size: 30px;
+    }
+
+    .nuestros-servicios-info .servicio p{
+        line-height: 1.5;
+        font-size: 15px;
+    }
+
+
+    /*------SECCION SERVICIOS COMPLEMENTARIOS*/
+    .section-nuestros-servicios .nuestros-servicios-complementarios  .servicio{
+        height: auto;
+    }
+
+    .section-nuestros-servicios .nuestros-servicios-complementarios .servicio .servicio-info{
+        height: 250px;
+    }
+
+    .section-nuestros-servicios .nuestros-servicios-complementarios{
+        height: 100vh;
+    }
+
+    .nuestros-servicios-info .servicio-info h2{
+        font-size: 30px;
+    }
+
+    .nuestros-servicios-info .servicio-info h2 strong{
+        font-size: 30px;
+    }
+
+    .nuestros-servicios-info .servicio p{
+        line-height: 1.5;
+        font-size: 15px;
+    }
+
+    /*-------------------SECCION ENVIAR EMAIL---------------------*/
+
+    .section-enviar-correo .enviar-correo{
+        width: 40%;
+        gap: 20px;
+    }
 }
