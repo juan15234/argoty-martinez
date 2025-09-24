@@ -337,7 +337,6 @@ nav .navegacion a:hover::after{
     display: flex;
     align-items: center;
     justify-content: center;
-    align-self: self-start;
     flex-wrap: wrap;
     gap: 80px;
 }
@@ -518,7 +517,6 @@ nav .navegacion a:hover::after{
     top: 0;
     left: 0;
     width: 100%;
-    height: 100vh; 
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -794,6 +792,7 @@ nav .navegacion a:hover::after{
     display: flex;
     gap: 10px;
     width: 100%;
+    justify-content: center;
 }
 
 .section-enviar-correo .enviar-correo .campo{
@@ -965,7 +964,6 @@ nav .navegacion a:hover::after{
     }
 
     /*---------SECTION NUESTROS SERVICIOS-------------*/
-
     .section-nuestros-servicios .nuestros-servicios  .servicio{
         height: auto;
     }
@@ -1563,21 +1561,31 @@ nav .navegacion a:hover::after{
 @media (min-width: 0px) and (max-width: 767px){
 
     .section-principal {
-        height: 180vh;
-        width: 90vh;
+        height: 210vh;
+        width: 100vh;
         background-position: center;
-    }
-
-    nav .empresa-logo h2{
-        font-size: 10px;
-    }
-
-    nav .empresa-logo h1{
-        font-size: 15px;
+        background-repeat: no-repeat;
+        background-size: cover;
     }
 
     nav{
-        grid-template-columns: 1fr 1.4fr;
+        height: 10vh;
+    }
+
+    nav .empresa-logo{
+        justify-content: center;
+    }
+
+    nav .empresa-logo h2{
+        font-size: 20px;
+    }
+
+    nav .empresa-logo h1{
+        font-size: 22px;
+    }
+
+    nav{
+        grid-template-columns: 1fr 1.6fr;
     }
 
     nav .empresa-logo{
@@ -1587,34 +1595,34 @@ nav .navegacion a:hover::after{
     }
 
     nav .navegacion{
-        gap: 15px;
+        gap: 10px;
         margin: 0;
-        margin-right: 0px;
         justify-content: start;
     }
 
     nav .navegacion li a{
         position: relative;
-        font-size: 10px;
+        font-size: 13px;
     }
 
     .section-principal .titulos-container{
         height: 300px;
+        width: 600px;
     }
 
     .section-principal .titulos-container .titulos-principal h2{
-        font-size: 25px;
+        font-size: 45px;
     }
 
     .section-principal .titulos-container .titulos-principal h4{
-        font-size: 10px;
+        font-size: 15px;
     }
 
     /*-------------SECTION QUIENES SOMOS----------*/
 
     .section-quienes-somos {
         height: 150vh;
-        width: 90vh;
+        width: 100vh;
         background-position: center;
     }
 
@@ -1647,7 +1655,7 @@ nav .navegacion a:hover::after{
 
     .section-equipo{
         height: 100vh;
-        width: 90vh;
+        width: 100vh;
         background-position: center;
     }
 
@@ -1683,7 +1691,7 @@ nav .navegacion a:hover::after{
 
     .section-clientes {
         height: 100vh;
-        width: 90vh;
+        width: 100vh;
         background-position: center;
     }
 
@@ -1725,7 +1733,7 @@ nav .navegacion a:hover::after{
 
     .section-proyectos-comerciales {
         height: 105vh;
-        width: 90vh;
+        width: 100vh;
         background-position: center;
     }
 
@@ -1767,7 +1775,7 @@ nav .navegacion a:hover::after{
 
     .section-proyectos-residenciales {
         height: 80vh;
-        width: 90vh;
+        width: 100vh;
         background-position: center;
     }
 
@@ -1805,7 +1813,7 @@ nav .navegacion a:hover::after{
 
     .section-nuestros-servicios {
         height: 125vh;
-        width: 90vh;
+        width: 100vh;
         background-position: center;
     }
 
@@ -1889,7 +1897,7 @@ nav .navegacion a:hover::after{
 
     .section-contacto {
         height: 100vh;
-        width: 90vh;
+        width: 100vh;
         background-position: center;
     }
 
@@ -1898,7 +1906,7 @@ nav .navegacion a:hover::after{
     }
 
     .section-contacto .contacto .contacto-info h2{
-        font-size: 55px;
+        font-size: 50px;
     }
 
     .section-contacto .contacto .contacto-info ul li{
@@ -1915,7 +1923,7 @@ nav .navegacion a:hover::after{
 
     .section-enviar-correo {
         height: 125vh;
-        width: 90vh;
+        width: 100vh;
         background-position: center;
     }
 
@@ -1926,12 +1934,16 @@ nav .navegacion a:hover::after{
         margin-top: 5px;
     }
 
+    .section-enviar-correo .enviar-correo .nombre-completo{
+        width: 50%;
+    }
+
     .section-enviar-correo h2{
         font-size: 50px;
     }
 
     .section-enviar-correo .enviar-correo{
         width: 60%;
-        gap: 10px;
+        gap: 30px;
     }
 }
