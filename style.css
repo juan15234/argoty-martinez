@@ -527,7 +527,7 @@ nav .navegacion a:hover::after{
 .section-nuestros-servicios .barra-superior{
     width: 100%;
     height: 3vh;
-    background-color: black;
+    background-color: gray;
 }
 
 .section-nuestros-servicios .titulo{
