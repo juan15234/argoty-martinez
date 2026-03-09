@@ -5,6 +5,7 @@ html,body{
     overflow-x: hidden;
     margin: 0;
     padding: 0;
+    scrollbar-width: none;
 }
 
 h1{
@@ -37,6 +38,16 @@ a{
     color: white;
     font-family: 'Cinzel', sans-serif;
     text-align: center;
+}
+
+span{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: lighter;
+    text-align: center;
+}
+
+span:hover{
+    cursor: pointer;
 }
 
 nav{
@@ -215,7 +226,7 @@ nav{
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 95vh;
+    height: 100vh;
     align-items: center;
     margin: 0;
     background-color: black;
@@ -240,24 +251,39 @@ nav{
 .galeria_equipo{
     display: flex;
     width: 95%;
-    height: 400px;
-    overflow: hidden;
+    height: 550px;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-snap-type:x mandatory;
     border: 1px solid rgb(207, 162, 15);
     border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+.galeria_equipo img{
+    position: relative;
+    min-width: 100%;
+    object-fit: cover;
+    scroll-snap-align: center;
 }
 
 .galeria_equipo button{
     position: absolute;
-    top: 45%;
     width: 40px;
     height: 40px;
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.625);
     color: white;
     outline: none;
     border: none;
     border-radius: 50%;
     left: 5px;
-    margin: 5px;
+    bottom: 30%;
+    margin: 10px;
+    z-index: 2;
+}
+
+.galeria_equipo button:hover{
+    cursor: pointer;
 }
 
 .galeria_equipo button:last-of-type{
@@ -268,4 +294,81 @@ nav{
 .galeria_equipo button svg{
     width: 20px;
     height: 20px;
+}
+
+/*SECTION SERVICIOS*/
+
+.section-servicios{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    margin: 0;
+    background-color: black;
+    gap: 30px;
+}
+
+.servicios-argoty{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+
+.card-servicio{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 500px;
+    border: 1px solid rgb(207, 162, 15);
+    border-radius: 30px;
+    margin-bottom: 50px;
+    color: white;
+    overflow: hidden;
+}
+
+.galeria_proyectos{
+    position: absolute;
+    display: flex;
+    width: 100%;
+    height: 500px;
+    border-radius: 30px;
+    overflow: hidden;
+    scroll-behavior: smooth;
+    scroll-snap-type:x mandatory;
+}
+
+.slide{
+    position: relative;
+    min-width: 100%;
+}
+
+.slide::after{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.7);
+}
+
+.galeria_proyectos img{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    scroll-snap-align: center;
+}
+
+.titulos_card{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    gap: 10px;
 }
